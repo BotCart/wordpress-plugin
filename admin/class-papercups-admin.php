@@ -102,6 +102,7 @@ class Papercups_Admin
     register_setting('general', 'papercups_primary_color', array('default' => '#1890ff'));
     register_setting('general', 'papercups_require_email_upfront');
     register_setting('general', 'papercups_base_url', array('default' => 'https://app.papercups.io'));
+    register_setting('general', 'papercups_iframe_url_override', array('default' => 'https://botcart-chatwindow.herokuapp.com/'));
   }
 
   private function add_settings_fields()
@@ -225,6 +226,22 @@ class Papercups_Admin
         'tip'       => __('Check if you want to require the email upfront', $this->plugin_name)
       ),
     );
+
+    add_settings_field(
+      'papercups_iframe_url_override',
+      __('Papercups iframeOveride url', $this->plugin_name),
+      array($this, 'text_input_callback'),
+      'general',
+      'papercups_settings_section',
+      array(
+        'type'      => 'text',
+        'value'     => get_option('papercups_iframe_url_override'),
+        'class'     => 'regular-text ltr',
+        'label_for' => 'papercups_iframe_url_override',
+        'tip'       => __('Change this if you have you have your chat window hosted', $this->plugin_name)
+      ),
+    );
+
   }
 
   function settings_section_cb($arg)

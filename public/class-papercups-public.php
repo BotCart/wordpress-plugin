@@ -70,7 +70,8 @@ class Papercups_Public {
            'primaryColor'          => get_option('papercups_primary_color'),
            'greeting'              => get_option('papercups_greeting'),
            'requireEmailUpfront'   => get_option('papercups_require_email_upfront'),
-           'baseUrl'               => get_option('papercups_base_url')
+           'baseUrl'               => get_option('papercups_base_url'),
+           'iframeUrlOverride'     => get_option('papercups_iframe_url_override')
         )
     );
   }

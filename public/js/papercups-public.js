@@ -12,6 +12,7 @@
         greeting: papercupsVars.greeting,
         baseUrl: papercupsVars.baseUrl,
         requireEmailUpfront: papercupsVars.requireEmailUpfront,
+        iframeUrlOverride: papercupsVars.iframeUrlOverride
       },
     };
   }
