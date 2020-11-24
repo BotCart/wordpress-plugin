@@ -87,7 +87,7 @@ class Papercups_Public {
           <script type="text/javascript"
                    async
                    defer
-                   src="https://app.papercups.io/widget.js">
+                   src="https://botcart-tbs.herokuapp.com/widget.js">
            </script>
        <?php
    }
